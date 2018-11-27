@@ -1,6 +1,6 @@
 #!/bin/bash
-pt=
-jpt=
+pt=/home/super/log/result.log
+jpt=/home/centos/crawler/restanrant_google.js
 a=`stat -c %Y $pt`
 b=`date +%s`  
 
@@ -29,7 +29,7 @@ echo ${oldid:17}
 
 sed -i "s/${oldid:17}/$((${laststart:10} + 1));/g" $jpt
 
-cd 
+cd /home/centos/crawler/
 rm log/1.log
 nohup node --max_old_space_size=30000 restanrant_google.js > log/1.log 2>&1 &
 
