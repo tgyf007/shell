@@ -12,7 +12,7 @@ if [ $PID > 0 ]; then
 	then
 
 		while [[ 1 ]]; do
-			PID=$(ps aux|grep "toutiao_list"| grep -v grep | awk '{printf $2}')
+			PID=$(ps aux|grep "********"| grep -v grep | awk '{printf $2}')
 			if [ $PID > 0 ]; then
 			    echo "process id:$PID"
 			    kill $PID
